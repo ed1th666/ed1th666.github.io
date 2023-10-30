@@ -10,6 +10,7 @@
 
 body {
 	font-family: "Lato", sans-serif;
+	background-color: #150526;
 }
 
 /* + ----- +   HERO   + ----- + */
@@ -27,12 +28,28 @@ body {
 	background-attachment: fixed;
 }
 
+@keyframes hero-slide-in {
+	0% {
+		transform: translateY(2rem);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
 .hero__inner {
 	flex-basis: 1000px;
 	padding: 2rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	animation-name: hero-slide-in;
+	animation-duration: .25s;
+	animation-timing-function: ease-in-out;
+	animation-delay: .5s;
+	animation-fill-mode: both;
 }
 
 .hero__avatar {
@@ -53,7 +70,7 @@ body {
 	position: absolute;
 	left: 0;
 	bottom: -2rem;
-	background-color: #b65fcf;	
+	background-color: #7e6ceb;	
 }
 
 .hero__title {
